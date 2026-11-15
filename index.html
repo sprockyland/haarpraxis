@@ -1,113 +1,25 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111713">
 <title>Haarpraxis Friseure – Berlin-Friedrichshain</title>
-<meta name="description" content="Schneiden, Färben und Haarkosmetik in Berlin-Friedrichshain. Termine bequem telefonisch: 030 / 53 08 28 00.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#f6f1ea;--surf:#fffdf9;--ink:#1d2420;--mute:#5d665f;--acc:#2f4a3b;--acc2:#c9a27a;--line:#e3dacd;--on-acc:#f6f1ea;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a16;--surf:#1c2420;--ink:#efe9df;--mute:#a3ada5;--acc:#9bc3a9;--acc2:#d4ad86;--line:#2c3630;--on-acc:#10170f;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#141a16;--surf:#1c2420;--ink:#efe9df;--mute:#a3ada5;--acc:#9bc3a9;--acc2:#d4ad86;--line:#2c3630;--on-acc:#10170f;color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.08;margin:0;letter-spacing:-.02em}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:Fraunces,serif;font-size:21px;text-decoration:none;letter-spacing:-.02em}
-.logo b{font-weight:600;color:var(--acc)}
-nav{display:flex;gap:26px;align-items:center}
-nav a{text-decoration:none;font-size:15px;color:var(--mute);font-weight:500}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--on-acc)!important;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--ink)!important;border:1px solid var(--line)}
-.burger{display:none;background:none;border:1px solid var(--line);border-radius:999px;width:44px;height:44px;color:var(--ink);font-size:18px;cursor:pointer}
-.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:18px}
-h1{font-size:clamp(42px,7vw,84px)}
-h1 em{font-style:italic;color:var(--acc)}
-.lead{font-size:19px;color:var(--mute);max-width:520px;margin:22px 0 32px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.visual{aspect-ratio:4/5;border-radius:220px 220px 28px 28px;background:radial-gradient(circle at 30% 20%,var(--acc2),transparent 55%),linear-gradient(160deg,var(--acc),#16241c);position:relative;overflow:hidden;display:grid;place-items:center}
-.visual svg{width:62%;opacity:.92}
-.badge{position:absolute;bottom:18px;left:18px;right:18px;background:color-mix(in srgb,var(--surf) 88%,transparent);backdrop-filter:blur(10px);border-radius:18px;padding:14px 18px;font-size:14px;color:var(--ink)}
-.badge b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:17px}
-section{padding:72px 0}
-.sec-h{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:36px;flex-wrap:wrap}
-h2{font-size:clamp(32px,4.6vw,52px)}
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.card{background:var(--surf);border:1px solid var(--line);border-radius:26px;padding:30px;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.35)}
-.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
-.card h3{font-size:27px;margin:14px 0 10px}
-.card p{margin:0;color:var(--mute);font-size:16px}
-.ico{width:46px;height:46px;border-radius:14px;background:color-mix(in srgb,var(--acc) 14%,transparent);display:grid;place-items:center;color:var(--acc);font-size:22px}
-.card.dark{background:var(--acc);color:var(--on-acc);border:none}
-.card.dark p{color:color-mix(in srgb,var(--on-acc) 78%,transparent)}
-.card.dark .ico{background:rgba(255,255,255,.14);color:var(--on-acc)}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.ppl{display:grid;gap:14px}
-.person{display:flex;gap:16px;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:18px}
-.av{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--acc2),var(--acc));display:grid;place-items:center;color:var(--on-acc);font-family:Fraunces,serif;font-size:24px;flex:none}
-.person b{display:block;font-family:Fraunces,serif;font-size:20px;font-weight:600}
-.person span{color:var(--mute);font-size:15px}
-.about p{color:var(--mute);margin:0 0 16px}
-.hours{background:var(--surf);border:1px solid var(--line);border-radius:26px;padding:12px 30px}
-.row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:18px}
-.row:last-child{border:none}
-.row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
-.row.today{color:var(--acc)}
-.row.closed span:last-child{color:var(--mute);font-weight:400}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.termin{background:var(--acc);color:var(--on-acc);border-radius:36px;padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
-.termin h2{font-size:clamp(34px,5vw,58px)}
-.termin p{color:color-mix(in srgb,var(--on-acc) 82%,transparent);max-width:520px;margin:18px 0 0}
-.termin .btn{background:var(--on-acc);color:var(--acc)!important;font-size:21px;padding:20px 32px}
-.note{font-size:14px;margin-top:14px;opacity:.8}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact .card h3{font-size:22px;margin-top:0}
-.contact p{font-size:18px;color:var(--ink)}
-.map{min-height:280px;background:repeating-linear-gradient(45deg,transparent 0 22px,var(--line) 22px 23px),var(--surf);display:grid;place-items:center;text-align:center}
-footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--mute);font-size:15px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{margin-left:18px;text-decoration:none}
-.legal{display:none;padding:56px 0}
-.legal.on{display:block}
-.legal h2{margin-bottom:24px}
-.legal p{color:var(--mute);max-width:680px}
-body.legalview main,body.legalview header nav a.hide{display:none}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media (max-width:860px){
-.hero,.about,.termin,.contact,.two{grid-template-columns:1fr}
-.hero{padding-top:40px}.visual{aspect-ratio:1/1;border-radius:160px 160px 24px 24px}
-.c2,.c3,.c4{grid-column:span 6}
-nav{position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:18px 22px 24px;gap:18px;border-bottom:1px solid var(--line);display:none}
-nav.open{display:flex}.burger{display:block}
-section{padding:48px 0}
-}
-</style>
+<meta name="description" content="Schneiden, Färben und Haarkosmetik in Berlin-Friedrichshain. Termine telefonisch: 030 / 53 08 28 00.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap bar">
-<a class="logo" href="#top">Haar<b>praxis</b></a>
+<a class="logo" href="index.html">Haar<b>praxis</b></a>
 <nav id="nav">
-<a href="#leistungen">Leistungen</a><a href="#ueber-uns">Über uns</a><a href="#zeiten">Öffnungszeiten</a><a href="#kontakt">Kontakt</a>
+<a href="#leistungen">Leistungen</a><a href="#ueber-uns">Über uns</a><a href="#zeiten">Öffnungszeiten</a><a href="#bewertungen">Bewertungen &amp; Fotos</a><a href="#kontakt">Kontakt</a>
 <a class="btn" href="tel:+493053082800">030 / 53 08 28 00</a>
 </nav>
 <button class="burger" id="burger" aria-label="Menü">☰</button>
 </div></header>
 
-<main id="top">
+<main>
 <div class="wrap hero">
 <div class="rv">
 <div class="eyebrow">Friseure · Berlin-Friedrichshain</div>
@@ -116,16 +28,16 @@ section{padding:48px 0}
 <div class="cta"><a class="btn" href="#termin">Termin vereinbaren</a><a class="btn ghost" href="#leistungen">Unsere Leistungen</a></div>
 </div>
 <div class="visual rv">
-<svg viewBox="0 0 120 120" fill="none" stroke="#f6f1ea" stroke-width="2.4" stroke-linecap="round"><circle cx="30" cy="92" r="14"/><circle cx="30" cy="28" r="14"/><path d="M42 84 100 24M42 36l58 60"/></svg>
+<svg viewBox="0 0 120 120" fill="none" stroke="#efe9df" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="30" cy="92" r="14"/><circle cx="30" cy="28" r="14"/><path d="M42 84 100 24M42 36l58 60"/></svg>
 <div class="badge"><b>Tanja &amp; Synke</b>Ihre Haarpraxis seit 2009</div>
 </div>
 </div>
 
 <section id="leistungen"><div class="wrap">
-<div class="sec-h rv"><h2>Was wir für<br>Ihr Haar tun.</h2></div>
+<div class="sec-h rv"><div class="eyebrow">Leistungen</div><h2>Was wir für<br>Ihr Haar <em>tun</em>.</h2></div>
 <div class="bento">
 <div class="card c3 rv"><div class="ico">✂</div><h3>Schneiden</h3><p>Präzise Schnitte, individuell auf Haarstruktur, Gesicht und Alltag abgestimmt.</p></div>
-<div class="card c3 dark rv"><div class="ico">◐</div><h3>Färben</h3><p>Farbe mit Fachkompetenz – von dezenten Nuancen bis zum kompletten Wechsel.</p></div>
+<div class="card c3 rv"><div class="ico">◐</div><h3>Färben</h3><p>Farbe mit Fachkompetenz – von dezenten Nuancen bis zum kompletten Wechsel.</p></div>
 <div class="card c4 rv"><div class="ico">✦</div><h3>Haarkosmetik</h3><p>Pflege und Produkte für gesundes, glänzendes Haar – wir beraten Sie gern persönlich im Salon.</p></div>
 <div class="card c2 rv"><div class="ico">☏</div><h3>Beratung</h3><p>Erst reden, dann schneiden: Wir nehmen uns Zeit.</p></div>
 </div>
@@ -138,7 +50,7 @@ section{padding:48px 0}
 </div>
 <div class="rv">
 <div class="eyebrow">Über uns</div>
-<h2 style="margin-bottom:22px">Aus Kolleginnen wurden Freundinnen – und Partnerinnen.</h2>
+<h2 style="margin-bottom:22px">Aus Kolleginnen wurden Freundinnen – und <em>Partnerinnen</em>.</h2>
 <p>Viele Jahre arbeiteten wir gemeinsam in einem renommierten Salon in Berlin-Steglitz. Am 18. April 2009 erfüllten wir uns den Traum von der eigenen Haarpraxis in Friedrichshain.</p>
 <p>Ein kleiner, liebevoll eingerichteter Salon mitten im Kiez, gut angebunden und mit dem Ringcenter in der Nähe. Besuchen Sie uns und lernen Sie uns kennen – wir freuen uns auf Sie!</p>
 </div>
@@ -147,8 +59,8 @@ section{padding:48px 0}
 <section id="termin"><div class="wrap">
 <div class="termin rv">
 <div>
-<div class="eyebrow" style="color:var(--acc2)">Termine</div>
-<h2>Wir finden Ihr Zeitfenster – persönlich.</h2>
+<div class="eyebrow">Termine</div>
+<h2>Wir finden Ihr <em>Zeitfenster</em> – persönlich.</h2>
 <p>Eine Online-Buchung gibt es bei uns bewusst nicht. Rufen Sie uns an und sprechen Sie Ihren Termin telefonisch ab – so finden wir gemeinsam das individuelle Zeitfenster, das zu Ihrem Haar und Ihrem Alltag passt.</p>
 </div>
 <div><a class="btn" href="tel:+493053082800">☏ 030 / 53 08 28 00</a><div class="note">Erreichbar zu unseren Öffnungszeiten.</div></div>
@@ -156,59 +68,55 @@ section{padding:48px 0}
 </div></section>
 
 <section id="zeiten"><div class="wrap two">
-<div class="rv"><div class="eyebrow">Öffnungszeiten</div><h2>Wann Sie uns<br>finden.</h2></div>
+<div class="rv"><div class="eyebrow">Öffnungszeiten</div><h2>Wann Sie uns<br><em>finden</em>.</h2></div>
 <div class="hours rv" id="hours">
 <div class="row" data-d="2"><span>Dienstag</span><span>09:00 – 18:00</span></div>
 <div class="row" data-d="3"><span>Mittwoch</span><span>09:00 – 18:00</span></div>
 <div class="row" data-d="4"><span>Donnerstag</span><span>09:00 – 20:00</span></div>
 <div class="row" data-d="5"><span>Freitag</span><span>09:00 – 20:00</span></div>
 <div class="row" data-d="6"><span>Sonnabend</span><span>09:00 – 14:00</span></div>
-<div class="row closed" data-d="0,1"><span>Sonntag &amp; Montag</span><span>geschlossen</span></div>
+<div class="row closed"><span>Sonntag &amp; Montag</span><span>geschlossen</span></div>
+</div>
+</div></section>
+
+<section id="bewertungen"><div class="wrap">
+<div class="sec-h rv"><div class="eyebrow">Bewertungen &amp; Fotos</div><h2>Das sagen <em>Gäste</em> auf Google.</h2></div>
+<div class="mapbox rv" id="mapbox">
+<div class="consent">
+<div class="ico">★</div>
+<p>Hier sehen Sie unseren Google-Eintrag mit Bewertungen und Fotos. Beim Laden werden Daten (u. a. Ihre IP-Adresse) an Google übertragen. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+<button class="btn" id="loadmap" type="button">Google-Karte laden</button>
+<a class="btn ghost" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Haarpraxis+Friseure+Jessnerstra%C3%9Fe+20+10247+Berlin">Direkt auf Google Maps öffnen</a>
+</div>
 </div>
 </div></section>
 
 <section id="kontakt"><div class="wrap">
-<div class="sec-h rv"><h2>Kontakt &amp; Anfahrt.</h2></div>
+<div class="sec-h rv"><div class="eyebrow">Kontakt</div><h2>So erreichen <em>Sie uns</em>.</h2></div>
 <div class="contact">
 <div class="card rv"><h3>Haarpraxis Friseure</h3>
 <p>Synke Holfeld &amp; Tanja Proboszcz<br>Jessnerstraße 20<br>10247 Berlin</p>
 <p style="margin-top:18px"><a href="tel:+493053082800"><b>030 / 53 08 28 00</b></a><br><a href="mailto:info@haarpraxis-friseure.de">info@haarpraxis-friseure.de</a></p></div>
-<div class="card map rv"><div><div class="ico" style="margin:0 auto 12px">⌖</div><b>Jessnerstraße 20</b><br><span style="color:var(--mute)">Friedrichshain · nahe Ringcenter</span><br><br><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jessnerstra%C3%9Fe+20+10247+Berlin">Route öffnen</a></div></div>
+<div class="card rv"><h3>Termine</h3><p>Bitte telefonisch vereinbaren – so finden wir gemeinsam ein individuelles Zeitfenster für Sie.</p><p style="margin-top:18px"><a class="btn" href="tel:+493053082800">Jetzt anrufen</a></p></div>
 </div>
 </div></section>
 </main>
 
-<div class="wrap">
-<div class="legal" id="impressum"><h2>Impressum</h2>
-<p><b>Haarpraxis Friseure</b><br>Synke Holfeld, Tanja Proboszcz<br>Jessnerstraße 20, 10247 Berlin</p>
-<p>Telefon: 030 / 53 08 28 00<br>E-Mail: info@haarpraxis-friseure.de</p>
-<p>Weitere Pflichtangaben (z. B. Umsatzsteuer-ID, Aufsichtsbehörde/Handwerkskammer) bitte aus dem bestehenden Impressum übernehmen und hier ergänzen.</p>
-<p><a href="#top">← Zurück zur Startseite</a></p></div>
-<div class="legal" id="datenschutz"><h2>Datenschutz</h2>
-<p>Diese Website erhebt selbst keine personenbezogenen Daten und enthält keine Formulare, Tracker oder Online-Buchung. Termine werden ausschließlich telefonisch vereinbart.</p>
-<p>Beim Aufruf werden durch den Hosting-Anbieter technisch notwendige Server-Logdaten verarbeitet. Schriftarten werden von Google Fonts geladen, wodurch Ihre IP-Adresse an Google übertragen wird.</p>
-<p>Bitte diesen Text mit der bestehenden Datenschutzerklärung abgleichen und rechtlich prüfen lassen, bevor die Seite live geht.</p>
-<p><a href="#top">← Zurück zur Startseite</a></p></div>
-</div>
-
-<footer><div class="wrap"><span>© 2026 Haarpraxis Friseure, Berlin</span><span><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></span></div></footer>
+<footer><div class="wrap"><span>© 2026 Haarpraxis Friseure, Berlin</span><span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span></div></footer>
 
 <script>
 (function(){
 var nav=document.getElementById('nav');
 document.getElementById('burger').onclick=function(){nav.classList.toggle('open')};
 nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
-function route(){
-var h=location.hash.slice(1),legal=h==='impressum'||h==='datenschutz';
-document.querySelector('main').style.display=legal?'none':'';
-['impressum','datenschutz'].forEach(function(id){document.getElementById(id).classList.toggle('on',h===id)});
-if(legal)window.scrollTo(0,0);
-}
-window.addEventListener('hashchange',route);route();
-var d=new Date().getDay();
-document.querySelectorAll('#hours .row').forEach(function(r){
-if(r.dataset.d.split(',').indexOf(String(d))>-1&&r.dataset.d!=='0,1')r.classList.add('today');
-});
+var d=String(new Date().getDay());
+document.querySelectorAll('#hours .row[data-d]').forEach(function(r){if(r.dataset.d===d)r.classList.add('today')});
+document.getElementById('loadmap').onclick=function(){
+var f=document.createElement('iframe');
+f.src='https://www.google.com/maps?q='+encodeURIComponent('Haarpraxis Friseure, Jessnerstraße 20, 10247 Berlin')+'&output=embed&hl=de';
+f.title='Google Maps: Haarpraxis Friseure';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+document.getElementById('mapbox').replaceChildren(f);
+};
 var els=document.querySelectorAll('.rv');
 if('IntersectionObserver' in window){
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
